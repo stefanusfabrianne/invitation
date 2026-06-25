@@ -1106,11 +1106,14 @@ style="background-image: url(bn1.png);"
 		</div>
 					</div>
 		</section>
-				<!-- <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-67f003fb elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default" data-eae-slider="91582" data-id="67f003fb" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
+
+
+
+				 <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-67f003fb elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default" data-eae-slider="91582" data-id="67f003fb" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
 						<div class="elementor-container elementor-column-gap-no">
 					<div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-6a2e64c8 reveal" data-eae-slider="79861" data-id="6a2e64c8" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 			<div class="elementor-widget-wrap elementor-element-populated">
-					<div class="elementor-background-overlay"></div>
+					<div class="elementor-background-overlay" style="    background-image: radial-gradient(at center center, #e97e7e 0%, #4a1919 80%) !important;"></div>
 						<div class="elementor-element elementor-element-2669619f elementor-widget elementor-widget-spacer" data-id="2669619f" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-spacer">
@@ -1146,7 +1149,8 @@ style="background-image: url(bn1.png);"
 				<div class="elementor-widget-container">
 							<div class="elementor-button-wrapper">
 
-			<a href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=Stefanus%20%26amp%3B%20Fabrianne&amp;dates=20260619T001700Z%2F20260620T001700Z" class="elementor-button-link elementor-button elementor-size-sm" target="_blank" rel="nofollow" role="button">		<span class="elementor-button-content-wrapper wds-flexbox">
+			<a href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=Stefanus%20%26amp%3B%20Fabrianne&amp;dates=20260802T001700Z%2F20260803T001700Z" class="elementor-button-link elementor-button elementor-size-sm" target="_blank" rel="nofollow" role="button">
+				<span class="elementor-button-content-wrapper wds-flexbox">
 							<span class="elementor-button-icon elementor-align-icon-row">
 					<i aria-hidden="true" class="far fa-calendar-alt"></i>				</span>
 						<span class="elementor-button-text">Save on the calendar</span>
@@ -1173,7 +1177,70 @@ style="background-image: url(bn1.png);"
 					</div>
 		</div>
 					</div>
-		</section> -->
+		</section> 
+
+<script>
+(function(){
+
+    const targetDate = new Date("2026-08-02T00:00:00").getTime();
+
+    function updateCountdown(){
+
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if(distance <= 0){
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        updateDigits('days', days);
+        updateDigits('hours', hours);
+        updateDigits('minutes', minutes);
+        updateDigits('seconds', seconds);
+    }
+
+    function updateDigits(type, value){
+
+        const container = document.querySelector(
+            '.jet-countdown-timer__item-value[data-value="' + type + '"]'
+        );
+
+        if(!container) return;
+
+        let formatted;
+
+        if(type === 'days'){
+            formatted = String(value).padStart(2,'0');
+        }else{
+            formatted = String(value).padStart(2,'0');
+        }
+
+        container.innerHTML = '';
+
+        formatted.split('').forEach(function(digit){
+
+            const span = document.createElement('span');
+            span.className = 'jet-countdown-timer__digit';
+            span.textContent = digit;
+
+            container.appendChild(span);
+
+        });
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown,1000);
+
+})();
+</script>
+
+
+
 				<!-- <section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-5d96a13 elementor-section-full_width elementor-section-content-middle jedv-enabled--yes elementor-section-height-default elementor-section-height-default" data-eae-slider="81226" data-id="5d96a13" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;jet_parallax_layout_list&quot;:[]}">
 						<div class="elementor-container elementor-column-gap-no">
 					<div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-aae911f reveal" data-eae-slider="99347" data-id="aae911f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1252,6 +1319,13 @@ style="background-image: url(bn1.png);"
 		</div>
 					</div>
 		</section> -->
+			
+
+
+
+
+
+
 				<section class="has_eae_slider elementor-section elementor-inner-section elementor-element elementor-element-2fb0b6 elementor-section-height-min-height elementor-section-full_width elementor-section-content-middle jedv-enabled--yes elementor-section-height-default" data-eae-slider="31047" data-id="2fb0b6" data-element_type="section" data-settings="{&quot;jet_parallax_layout_list&quot;:[]}">
 						<div class="elementor-container elementor-column-gap-no">
 					<div class="has_eae_slider elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-6eea0ca8" data-eae-slider="17667" data-id="6eea0ca8" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
