@@ -294,13 +294,50 @@ style="background-image: url(bg2.jpeg) !important;"
 						</div>
 				</div>
 				<div class="elementor-element elementor-element-46b897bb elementor-widget elementor-widget-heading" data-id="46b897bb" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
-				<!-- <div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Cordially Invite:</h2>				</div>
-				</div> -->
-				<!-- <div class="elementor-element elementor-element-52f543d6 elementor-widget elementor-widget-heading" data-id="52f543d6" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Stefanus Cahyadi</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Cordially Invite:</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-52f543d6 elementor-widget elementor-widget-heading" data-id="52f543d6" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+				<!-- <div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default" style="font-size: 19px;">Stefanus Cahyadi</h2>				</div>
 				</div> -->
+<script>
+window.onload = function () {
+    let hash = window.location.hash;
+
+    if (hash) {
+        let nama = hash.split('/').pop().replace(/^#/, '');
+
+        // Jika hash terakhir adalah "open", sembunyikan elemen
+        if (nama.toLowerCase() === "open") {
+            document.querySelectorAll(".ganti-nama").forEach(function(el){
+                el.style.display = "none";
+            });
+            return;
+        }
+
+        // Ganti underscore menjadi spasi
+        nama = nama.replace(/_/g, ' ');
+
+        // Kapital huruf awal tiap kata
+        nama = nama.replace(/\b\w/g, function(c) {
+            return c.toUpperCase();
+        });
+
+        // Tampilkan nama
+        document.querySelectorAll(".ganti-nama").forEach(function(el){
+            el.textContent = nama;
+            el.style.display = "";
+        });
+    }
+};
+</script>
+
+				<div class="elementor-widget-container">
+    <h2 class="elementor-heading-title elementor-size-default ganti-nama" style="font-size: 19px;">
+       name
+    </h2>
+</div>
 				<div class="elementor-element elementor-element-59d38bcf elementor-widget elementor-widget-spacer" data-id="59d38bcf" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
 							<div class="elementor-spacer">
@@ -956,7 +993,10 @@ style="background-image: url(bn1.png);"
 				</div>
 				<div class="elementor-element elementor-element-46d068e4 elementor-widget elementor-widget-heading" data-id="46d068e4" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Tranz MAV Hotel Samarinda</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Tranz MAV Hotel Samarinda<br>
+						<span style="font-size: 15px;">(Sakura Room)</span></h2>
+					
+									</div>
 				</div>
 				<div class="elementor-element elementor-element-711d5097 elementor-widget elementor-widget-spacer" data-id="711d5097" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
@@ -1069,7 +1109,8 @@ style="background-image: url(bn1.png);"
 				</div>
 				<div class="elementor-element elementor-element-25e4a5c5 elementor-widget elementor-widget-heading" data-id="25e4a5c5" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Tranz MAV Hotel Samarinda</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Tranz MAV Hotel Samarinda<br><span style="font-size: 15px;">(Ballroom)</span></h2>				
+				</div>
 				</div>
 				<div class="elementor-element elementor-element-507a1b74 elementor-widget elementor-widget-spacer" data-id="507a1b74" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
