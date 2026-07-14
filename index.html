@@ -330,7 +330,7 @@ style="background-image: url(bg2.jpeg) !important;"
 				<!-- <div class="elementor-widget-container">
 					<h2 class="elementor-heading-title elementor-size-default" style="font-size: 19px;">Stefanus Cahyadi</h2>				</div>
 				</div> -->
-<script>
+<!-- <script>
 window.onload = function () {
     let hash = window.location.hash;
 
@@ -347,6 +347,52 @@ window.onload = function () {
 
         // Ganti underscore menjadi spasi
         nama = nama.replace(/_/g, ' ');
+
+        // Kapital huruf awal tiap kata
+        nama = nama.replace(/\b\w/g, function(c) {
+            return c.toUpperCase();
+        });
+
+        // Tampilkan nama
+        document.querySelectorAll(".ganti-nama").forEach(function(el){
+            el.textContent = nama;
+            el.style.display = "";
+        });
+    }
+};
+</script> -->
+<script>
+window.onload = function () {
+    let hash = window.location.hash;
+
+    if (hash) {
+        let nama = hash.split('/').pop().replace(/^#/, '');
+
+        // Jika hash terakhir adalah "open", sembunyikan elemen
+        if (nama.toLowerCase() === "open") {
+            document.querySelectorAll(".ganti-nama").forEach(function(el){
+                el.style.display = "none";
+            });
+            return;
+        }
+
+        // Decode URL (%23 -> #)
+        nama = decodeURIComponent(nama);
+
+        // Hapus semua #, %, *, angka 2 dan 3 di awal jika berasal dari %23
+        nama = nama.replace(/^#/, '');
+        nama = nama.replace(/^23/, '');
+        nama = nama.replace(/^%23/i, '');
+        nama = nama.replace(/\*/g, '');
+
+        // Jika masih ada %23 di tengah
+        nama = nama.replace(/%23/gi, '');
+
+        // Ganti underscore menjadi spasi
+        nama = nama.replace(/_/g, ' ');
+
+        // Rapikan spasi
+        nama = nama.replace(/\s+/g, ' ').trim();
 
         // Kapital huruf awal tiap kata
         nama = nama.replace(/\b\w/g, function(c) {
